@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    const axios = require('axios');
+
+    const obj = {
+        nom: "Coucou",
+        coucou1() {
+            console.log(this.nom)
+            return "coucou";
+        },
+        coucou2: function () {
+            console.log(this.nom);
+            return "coucou";
+        },
+        coucou3: () => {
+            console.log(this.nom); // undefined
+        }
+    };
+
+   obj.coucou1();
+   obj.coucou2();
+   obj.coucou3();
+
+
+   const user = {
+       email : "....",
+       name : "Jean Michel",
+       age : 123
+   }
+
+   const {name, age, ...rest} = user;
+
+    console.log(name);
+
+    const arr =  ['peches', 'pomme', 'poires'];
+
+    const [el1, el2, ...rest2] = arr;
+    console.log(el2);
+
+    function test(...params) {
+        params.forEach(el => console.error(el));
+    }
+
+    test(1, 4, 5, 12, 90);
+
+    /*
+    Sucre syntaxique Ecmascript 6+
+    ... -> spread operator
+    destructuration d'objets ou de tableaux
+     */
+
+</script>
+
+</body>
+</html>

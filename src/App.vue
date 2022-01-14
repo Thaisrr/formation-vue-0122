@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <!-- En vue 3 : pas d'obligation de n'avoir qu'une div à la racine -->
+      <Navigation/>
+      <h1>Formation VueJS</h1>
+      <router-view/>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import Navigation from "./components/Navigation";
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {Navigation},
+  mounted() {
+        this.$store.dispatch('getJoke');
   }
 }
 </script>
@@ -17,8 +21,6 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;

@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "name": "Game of Throne",
+      "author": "George Martin",
+      "id": 1
+    },
+    {
+      "name": "L'Assassin Royal",
+      "author": "Robin Hobb",
+      "id": 2
+    },
+    {
+      "name": "Frankenstein",
+      "author": "Marie Shelley",
+      "id": 3
+    },
+    {
+      "name": "Le Livre sans nom",
+      "author": "Anonyme",
+      "id": 4
+    }
+  ]
+}
